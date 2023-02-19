@@ -1,6 +1,6 @@
 resource "digitalocean_ssh_key" "default" {
   name       = "Terraform Example"
-  public_key = file("./ssh/test-kafka-do.pub")
+  public_key = var.public_ssh_key
 }
 
 resource "digitalocean_droplet" "kafka" {

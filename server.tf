@@ -27,8 +27,8 @@ resource "digitalocean_droplet" "kafka" {
     sudo chmod +x /usr/local/bin/docker-compose
     sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
-    # INSTALL Git
-    sudo apt install git
+    # INSTALL GIT
+    sudo apt-get install git
 
     # RUN
     git clone https://WeakCookie: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@github.com/WeakCookie/test-kafka.git

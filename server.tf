@@ -31,7 +31,7 @@ resource "digitalocean_droplet" "kafka" {
     sudo apt-get install git
 
     # RUN
-    git clone https://WeakCookie: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@github.com/WeakCookie/test-kafka.git
+    git clone https://WeakCookie:"${var.github_token}"@github.com/WeakCookie/test-kafka.git
     cd test-kafka
     docker-compose up -d
   EOF

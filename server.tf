@@ -28,7 +28,6 @@ resource "digitalocean_droplet" "kafka" {
     sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
     # INSTALL Git
-    sudo apt update
     sudo apt install git
   EOF
 }

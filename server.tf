@@ -11,12 +11,6 @@ resource "digitalocean_droplet" "kafka" {
   ssh_keys = [digitalocean_ssh_key.default.fingerprint]
   user_data = <<-EOF
 		#!/bin/bash
-    # CREATE SWAP
-    sudo fallocate -l 4G /swapfile
-    sudo chmod 600 /swapfile
-    sudo mkswap /swapfile
-    sudo swapon /swapfile
-    sudo cat /etc/fstab >> /swapfile swap swap defaults 0 0
 
     # INSTALL DOCKER
     curl -fsSL https://get.docker.com -o get-docker.sh
